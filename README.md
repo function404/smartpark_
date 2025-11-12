@@ -1,39 +1,39 @@
 # 🚗 SmartPark — Sistema de Estacionamento Inteligente com Arduino
 
-## 👥 Integrantes
-- Lincoln
-- Felipe G
-- Gustavo
+### 👥 Integrantes
+- Lincoln Novais Mezzalira
+- Felipe Gabriel Schmitt
+- Gustavo Adriano Alves Palmeira
 
 ---
 
-## 🎯 Objetivo do Projeto
-Desenvolver um **sistema embarcado funcional** chamado **SmartPark**, que simula um **sensor de estacionamento automotivo inteligente**, utilizando **três sensores e dois atuadores**.  
-O sistema mede a distância de obstáculos, detecta luminosidade ambiente e monitora a temperatura externa.  
-Com base nesses dados, o SmartPark **aciona LEDs e um buzzer** para indicar a proximidade de obstáculos e **liga os faróis automaticamente** e também **altera a visualização de uma possível câmera traseira** quando escurece.
+### 🎯 Objetivo do Projeto
+Desenvolver um **sistema embarcado funcional** chamado **SmartPark**, que simula um **sensor de estacionamento automotivo inteligente**, utilizando **três sensores e dois atuadores**. O sistema mede a distância de obstáculos, detecta luminosidade ambiente e monitora a temperatura externa. Com base nesses dados, o SmartPark **aciona LEDs e um buzzer** para indicar a proximidade de obstáculos e **liga os faróis automaticamente** e também **altera a visualização de uma possível câmera traseira** quando escurece.
 
 ---
 
-## ⚙️ Componentes Utilizados
+### ⚙️ Componentes Utilizados
 | Tipo             | Componente                             | Quantidade |
 | ---------------- | -------------------------------------- | ---------- |
 | Microcontrolador | Arduino Uno R3                         |      1     |
 | Sensor           | HC-SR04 (ultrassônico)                 |      1     |
 | Sensor           | LDR (luminosidade)                     |      1     |
 | Sensor           | DHT11 (temperatura e umidade)          |      1     |
+| Sensor           | TMP36 (temperatura)                    |      1     |
 | Atuador          | LEDs (verde, amarelo, vermelho e azul) |      4     |
 | Atuador          | Buzzer passivo                         |      1     |
-| Outros           | Protoboard, resistores, jumpers        |  1  5  34  |
-| ---------------- | -------------------------------------- | ---------- |
+| Outros           | Protoboard, resistores, jumpers        |  1, 5, 34  |
+
+> ⚠️ Fica a sua escolha usar o sensor DHT11 ou TMP36, o repositório contém código para ambos.
 
 ---
 
-## 💰 Custo Estimado
-Aproximadamente **R$ 124,50**
+### 💰 Custo Estimado
+- Aproximadamente **R$ 124,50**
 
 ---
 
-## 🔌 Esquema de Montagem
+### 🔌 Esquema de Montagem
 - O **HC-SR04** mede a distância até o obstáculo e envia o sinal ao Arduino.  
   - Quando o obstáculo está longe, **apenas o LED verde** fica aceso.  
   - Conforme o objeto se aproxima, o **LED amarelo** acende e o **buzzer** emite apitos lentos.  
@@ -49,9 +49,11 @@ Aproximadamente **R$ 124,50**
 
 ---
 
-## 📸 Demonstração
-Video: [VÍDEO DE DEMONSTRAÇÃO](https://youtube.com/shorts/DLMjmrPVE5A?si=olXf0JUsB5tejPfD)
+### 📸 Demonstração
+- Video: [VÍDEO DE DEMONSTRAÇÃO](https://youtube.com/shorts/DLMjmrPVE5A?si=olXf0JUsB5tejPfD)
 
-Foto: [FOTO DE DEMONSTRAÇÃO](https://github.com/function404/smartpark_)
+- Foto: [FOTO DE DEMONSTRAÇÃO](https://github.com/function404/smartpark_/blob/main/docs/tinkercad_sensortmp36.png)
+
+> ⚠️ O vídeo demonstra o projeto utilizando o sensor DHT11, enquanto a foto apresenta a versão com o sensor TMP36.
 
 ---
