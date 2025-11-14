@@ -9,6 +9,7 @@
 #define LED_VERDE 2
 #define LED_AMARELO 3
 #define LED_VERMELHO 4
+#define LED_AZUL 7
 #define BUZZER 5
 
 long duracao;
@@ -26,6 +27,7 @@ void setup() {
    pinMode(LED_VERDE, OUTPUT);
    pinMode(LED_AMARELO, OUTPUT);
    pinMode(LED_VERMELHO, OUTPUT);
+   pinMode(LED_AZUL, OUTPUT);
    pinMode(BUZZER, OUTPUT);
 
    dht.begin();
@@ -44,6 +46,12 @@ void loop() {
    distancia = duracao * 0.034 / 2;
 
    luminosidade = analogRead(LDR_PIN);
+
+   if (luminosidade <= 600) {
+      digitalWrite(LED_AZUL, HIGH);
+   } else {
+      digitalWrite(LED_AZUL, LOW);
+   }
 
    temperatura = dht.readTemperature();
 
@@ -73,20 +81,24 @@ void loop() {
          digitalWrite(LED_AMARELO, LOW);
          digitalWrite(LED_VERMELHO, LOW);
          noTone(BUZZER);
-      } 
-      else if (distancia > 15 && distancia <= 30) {
+      } else if (distancia > 15 && distancia <= 30) {
          digitalWrite(LED_VERDE, LOW);
          digitalWrite(LED_AMARELO, HIGH);
          digitalWrite(LED_VERMELHO, LOW);
-         tone(BUZZER, 800, 100);
-         delay(200);
-      } 
-      else if (distancia <= 15) {
+         tone(BUZZER, 800, 150);
+         delay(300);
+      } else if (distancia > 5 && distancia <= 15) {
          digitalWrite(LED_VERDE, LOW);
          digitalWrite(LED_AMARELO, LOW);
          digitalWrite(LED_VERMELHO, HIGH);
-         tone(BUZZER, 1200, 100);
-         delay(100);
+         tone(BUZZER, 900, 100);
+         delay(300);
+      } else if (distancia <= 5) {
+         digitalWrite(LED_VERDE, LOW);
+         digitalWrite(LED_AMARELO, LOW);
+         digitalWrite(LED_VERMELHO, HIGH);
+         tone(BUZZER, 900);
+         delay(300);
       }
    }
 

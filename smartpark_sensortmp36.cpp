@@ -39,6 +39,12 @@ void loop() {
 
    luminosidade = analogRead(LDR_PIN);
 
+   if (luminosidade <= 600) {
+      digitalWrite(LED_AZUL, HIGH);
+   } else {
+      digitalWrite(LED_AZUL, LOW);
+   }
+
    int leitura = analogRead(TEMP_PIN);
    float tensao = leitura * (5.0 / 1024.0);
    temperatura = (tensao - 0.5) * 100.0;
@@ -49,13 +55,6 @@ void loop() {
    Serial.print(temperatura);
    Serial.print(" C | Luminosidade: ");
    Serial.println(luminosidade);
-
-   if (luminosidade <= 600) {
-      digitalWrite(LED_AZUL, HIGH);
-   } else {
-      digitalWrite(LED_AZUL, LOW);
-   }
-
 
    if (temperatura > 40) {
       digitalWrite(LED_VERDE, LOW);
