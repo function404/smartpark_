@@ -52,7 +52,7 @@ Desenvolver um **sistema embarcado funcional** chamado **SmartPark**, que simula
 ### 📸 Demonstração
 - Video: [VÍDEO DE DEMONSTRAÇÃO](https://youtube.com/shorts/DLMjmrPVE5A?si=olXf0JUsB5tejPfD)
 
-- Foto: [FOTO DE DEMONSTRAÇÃO](https://github.com/function404/smartpark_/blob/main/docs/tinkercad_sensortmp36.png)
+- Foto: ![imagem001](./docs/tinkercad_sensortmp36.png)
 
 > ⚠️ O vídeo demonstra o projeto utilizando o sensor DHT11, enquanto a foto apresenta a versão com o sensor TMP36.
 
